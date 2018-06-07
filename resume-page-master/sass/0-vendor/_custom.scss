@@ -1,0 +1,29 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+// Custom Colors
+$gray-dark:     #222;
+$teal:          #00dcc6;
+$white:         #FFFFFF;
+$body-bg:       #f5f5f5;
+$light-gray:    #e5eaee;
+
+// primary
+$brand-primary:            $teal;
+
+// Settings for the `<body>` element.
+$font-family-sans-serif: 'Roboto', sans-serif; // Font family for the body
+$font-weight-normal: 100; // The font weight for the body
+//$body-bg:       $tan; // The body background color
+$body-color:    $gray-dark; // The body font color
+
+// Style anchor elements.
+$link-color:            inherit;
+$link-hover-color:      inherit;
+$link-hover-decoration: none;
+
+// Jumbotron
+$jumbotron-padding:              1rem;
+$jumbotron-bg:                   $light-gray;

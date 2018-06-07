@@ -1,0 +1,238 @@
+.btn, button
+     cursor: pointer
+
+@font-face
+     font-family: Paint
+     src: url('../fonts/beyond_the_mountains.otf')
+
+.nav-container
+     position: absolute
+     top: 8%
+     right: 0
+     left: 0
+     z-index: 99
+     text-transform: uppercase
+     font-weight: bold
+
+     .navbar-toggler
+          padding: .35rem 1rem
+
+     .light
+          font-weight: 100
+
+     .bg-none
+          background: transparent
+
+     .navbar-brand
+          text-align: center
+          padding-left: 1rem
+          padding-right: 1rem
+          +media-breakpoint-down(sm)
+               font-size: 1rem
+               max-width: 70%
+          +media-breakpoint-up(sm)
+               max-width: 50%
+
+     .navbar-nav
+          width: 100%
+          justify-content: space-around
+
+.paint
+     font-family: Paint, 'Roboto', Helvetica, sans-serif
+     text-align: center
+     text-transform: uppercase
+     opacity: 0.8
+     letter-spacing: 0.5rem
+     font-weight: bold
+     +media-breakpoint-down(xs)
+          font-size: 2.5rem
+     +media-breakpoint-up(xs)
+          font-size: 3.5rem
+     +media-breakpoint-up(sm)
+          font-size: 5rem
+     +media-breakpoint-up(md)
+          font-size: 6rem
+     +media-breakpoint-up(lg)
+          font-size: 8rem
+
+.header
+     height: 80vmax
+     position: relative
+
+     #background-1
+          height: 75vmax
+          width: 100%
+          background: url('../images/adventure.png')
+          background-position: center
+          background-repeat: no-repeat
+          background-size: cover
+          color: white
+          +display-flex()
+          flex-direction: column
+          text-shadow: 0 .2rem .1rem rgba(0, 0, 0, 0.5)
+
+          .container
+               +display-flex
+               align-items: center
+
+     h1
+          @extend .paint
+          display: flex
+          align-items: center
+          justify-content: center
+          text-transform: none
+          flex-direction: column
+          flex-wrap: wrap
+          +media-breakpoint-down(xs)
+               font-size: 2.5rem
+          +media-breakpoint-up(sm)
+               font-size: 5rem
+          +media-breakpoint-up(md)
+               font-size: 5.5rem
+               flex-direction: row
+          +media-breakpoint-up(lg)
+               font-size: calc(7.5rem + (12 - 7.5) * (100vw - 800px) / (1200 - 800))
+
+          .small
+               font-size: 1.5rem
+               align-self: center
+               transform: matrix(1, -0.3, 0, 1, 0, 0)
+               position: relative
+               margin: 0rem 1rem 0 1rem
+               +media-breakpoint-up(md)
+                    font-size: 2rem
+                    margin: 0rem 3.5rem 0 1rem
+               +media-breakpoint-up(lg)
+                    font-size: 2.5rem
+
+               &:after
+                    content: ' '
+                    position: absolute
+                    bottom: 0
+                    left: 0
+                    right: 0
+                    margin: 0 auto
+                    height: 3px
+                    background: white
+                    width: 80%
+.mt-6
+     margin-top: 10rem
+
+.section
+     +section()
+     position: relative
+
+     .section-img
+          position: absolute
+          right: 0
+          top: 0
+          height: 80vh
+          z-index: -1
+
+     .full-bg-img
+          background-size: cover
+          background-position: center center
+          height: 100vmax
+          opacity: 0.9
+          +media-breakpoint-down(xs)
+               height: auto
+
+     .partial-bg-img
+          background-size: cover
+          background-position: top
+          height: 80vh
+
+     #background-2
+          background-image: url('../images/cliff2.png')
+
+     #background-3
+          background-image: url('../images/cliff3.png')
+          +media-breakpoint-down(xs)
+               height: 100vmax
+
+     #background-4
+          background-image: url('../images/mountain.png')
+
+     .newsletter
+          width: 88%
+
+
+.alt-section
+     height: 100vmax
+     @extend .section
+     overflow: visible
+     +media-breakpoint-down(xs)
+          height: auto
+
+.section-footer
+     @extend .section
+     margin-bottom: 0
+     padding-bottom: 0
+
+     h2
+          margin-top: 15rem
+
+     .social-links
+          +display-flex($j-content: space-between)
+          flex-wrap: wrap
+          @extend .text-white
+          text-align: center
+          li a
+               font-size: 2.5rem
+               +media-breakpoint-up(sm)
+                    font-size: 3rem
+               +media-breakpoint-up(md)
+                    font-size: 3.5rem
+               +media-breakpoint-up(lg)
+                    font-size: 4rem
+
+.container
+
+     h2, h3
+          text-transform: uppercase
+     .icon
+          margin: 2rem 0 1rem 0
+          font-size: 3rem
+
+     .white-jumbo
+          border: 2px solid transparentize($dark-blue, .5)
+          padding: 3rem
+          background: rgba(255, 255, 255, 0.8)
+          +media-breakpoint-up(lg)
+               background: rgba(255, 255, 255, 0.5)
+
+// card
+.card
+     box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5)
+     margin-top: 2rem
+
+     +media-breakpoint-up(lg)
+          margin-top: 0
+
+     .card-background
+          height: 8em
+          background-position: 40%
+          background-size: cover
+
+     #card-background-1
+          background-image: url('https://images.pexels.com/photos/497956/pexels-photo-497956.jpeg?w=940&h=650&auto=compress&cs=tinysrgb')
+
+     #card-background-2
+          background-image: url('https://images.pexels.com/photos/94604/pexels-photo-94604.jpeg?w=940&h=650&auto=compress&cs=tinysrgb')
+
+     #card-background-3
+          background-image: url('https://images.pexels.com/photos/29100/pexels-photo-29100.jpg?w=940&h=650&auto=compress&cs=tinysrgb')
+
+     // Absolute positioning can be used if negative margins are not preffered.
+     .avatar
+          max-width: 6em
+          max-height: 6em
+          margin-top: -4em
+          margin-bottom: 1em
+          border: 4px solid white
+          border-radius: 50%
+          background: radial-gradient(#e3e3e3, #329A7C, #109381)
+
+     .btn
+          margin-bottom: 1em
+          cursor: pointer

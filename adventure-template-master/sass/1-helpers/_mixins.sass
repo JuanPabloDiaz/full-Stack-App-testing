@@ -1,0 +1,91 @@
+$image-path: '../images' !default
+
+// Mixin for backgrounds
+=background($background-image, $height: 100vh)
+     background-image: url(#{$image-path}/#{$background-image})
+     background-size: cover
+     background-position: center center
+     background-repeat: no-repeat
+     height: $height
+// Mixin for background overlay
+=background-overlay($background-color, $opacity: 1, $height: 100vh)
+     content: ''
+     position: absolute
+     top: 0
+     right: 0
+     bottom: 0
+     left: 0
+     background: $background-color
+     opacity: $opacity
+     height: $height
+
+// Mixin for custom buttons
+=button($font-size: inherit, $font-weight: inherit, $font-color: $white, $background-color: transparent, $padding: 2em, $border: 0, $border-radius: 0)
+     display: inline-block
+     text-align: center
+     font-size: $font-size
+     font-weight: $font-weight
+     color: $font-color
+     background: $background-color
+     padding: $padding
+     border: $border
+     border-radius: $border-radius
+     box-sizing: border-box
+     text-transform: uppercase
+     margin-top: 0.5em
+     @extend %transition
+     cursor: pointer
+
+// Mixin for button hover
+=button-hover($background-color, $color, $border-color, $shadow-color: transparent, $font-weight: inherit)
+     &:hover
+          font-weight: $font-weight
+          border-color: $border-color
+          background: $background-color
+          color: $color
+          box-shadow: 0 0 2px $shadow-color
+
+// Mixin for custom sections
+=section($padding: 4rem 0, $width: 100%, $background-color: transparent, $color: inherit)
+     padding: $padding
+     width: $width
+     background-color: $background-color
+     color: $color
+
+// Mixin for custom display flex
+=display-flex($direction: row, $j-content: center, $a-items: center)
+     display: flex
+     flex-direction: $direction
+     justify-content: $j-content
+     align-items: $a-items
+
+// Ultimate font control
+=font-control($font-family: inherit, $font-size: inherit, $font-color: inherit, $font-weight: inherit, $text-transform: none, $line-height: inherit, $letter-spacing: inherit, $text-align: left)
+     font-family: $font-family
+     font-size: $font-size
+     color: $font-color
+     font-weight: $font-weight
+     text-transform: $text-transform
+     line-height: inherit
+     letter-spacing: $letter-spacing
+     text-align: $text-align
+
+// Custom cirle arount icons
+=circle-icon($square-size, $font-size: inherit, $border: 1px solid white, $line-height: $square-size, $margin-bottom: 0)
+     display: inline-block
+     font-size: $font-size
+     border: $border
+     border-radius: 50%
+     line-height: $line-height
+     margin-bottom: $margin-bottom
+     height: $square-size
+     width: $square-size
+     text-align: center
+
+// For absolute positioning
+=position-absolute($top: 0, $right: 0, $bottom: 0, $left: 0)
+     position: absolute
+     top: $top
+     right: $right
+     bottom: $bottom
+     left: $left

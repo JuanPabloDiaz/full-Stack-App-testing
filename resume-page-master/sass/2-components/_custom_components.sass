@@ -1,0 +1,38 @@
+.bg-dark
+     background: $gray-dark
+     font-weight: 300
+     p
+          @extend .text-muted
+
+.color-primary
+     color: $teal
+
+.section
+     padding: 5rem 0 0 0
+
+.small-hr
+     background-color: $teal
+     width: 60%
+     margin: 1rem 0 3rem 0
+
+.custom-circle
+     display: block
+     margin-left: auto
+     margin-right: auto
+     margin-bottom: 1rem
+
+.wrapper
+     margin: 0 auto
+     border: 1px solid rgb(147, 147, 147)
+     border-radius: 2px
+     box-shadow: 0 0 10px rgba(12, 3, 25, 0.8)
+
+.main-section-container
+     padding: 5rem 0
+     .main-section
+          padding: 8rem 0
+
+.flex-container
+     display: initial
+     @include media-breakpoint-up(md)
+          display: flex

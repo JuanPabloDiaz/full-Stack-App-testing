@@ -1,0 +1,28 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+// Custom Colors
+$dark-blue:                 #51616D;
+$white:                     #FFFFFF;
+
+// primary
+$brand-primary:             $dark-blue;
+
+// Settings for the `<body>` element.
+$font-family-sans-serif:   'Roboto', sans-serif; // Font family for the body
+$font-weight-normal:        300; // The font weight for the body
+$body-color:                $dark-blue; // The body font color
+$line-height-base:          2;
+
+// Will disable rounded corners
+$enable-rounded:            false;
+
+// Style anchor elements.
+$link-color:                inherit;
+$link-hover-color:          inherit;
+$link-hover-decoration:     none;
+
+// Navbar color
+$navbar-light-color:        $dark-blue

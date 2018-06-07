@@ -1,0 +1,52 @@
+.container
+     h2
+          margin: 0 0 2rem 0
+     h4
+          @extend .font-weight-normal
+          @extend .color-primary
+     h5
+          margin: 0.5rem 0
+
+     p
+          font-weight: 300
+
+.contact
+     max-width: 60%
+     @include media-breakpoint-up(md)
+          max-width: 100%
+     p:nth-child(2)
+          flex-basis: auto
+          @include media-breakpoint-up(lg)
+               flex-basis: 70%
+
+.skill-unit
+     max-width: 100%
+     margin: 0 auto 30px auto
+
+     .skill-bar
+          max-width: 100%
+          height: 10px
+          background-color: $light-gray
+          position: relative
+          border-radius: 5px
+
+     .skill-amount
+          position: absolute
+          height: 100%
+          background-color: $teal
+          border-radius: 5px
+          width: 0
+.canvas
+     border-radius: 50%
+     background: $body-bg
+     margin-top: 1rem
+     @include media-breakpoint-up(md)
+          margin-top: 0
+
+.profile-section
+     padding: 8rem 0.5rem
+
+.section-title
+     padding-left: 0.5rem
+     @include media-breakpoint-up(md)
+          padding-left: 1rem

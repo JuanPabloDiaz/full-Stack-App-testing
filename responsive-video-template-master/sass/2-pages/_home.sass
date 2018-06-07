@@ -1,0 +1,191 @@
+.fixed-video
+     display: block
+     width: 100%
+     height: 100%
+     object-fit: cover
+     position: fixed
+     z-index: -99
+
+.main-wrapper
+     background: $white
+     position: relative
+
+.video-container
+     height: 100vh
+     position: relative
+     display: flex
+     justify-content: center
+     align-items: center
+     flex-direction: column
+     color: $white
+     z-index: 1
+
+     &::before
+          content: ' '
+          +position-absolute()
+          height: 100vh
+          background: linear-gradient(to right, #085078, #85D8CE)
+          background: -webkit-linear-gradient(to right, #085078, #85D8CE)
+          z-index: -1
+          opacity: 0.65
+
+     h1
+          font-size: 5rem
+          font-weight: bold
+          letter-spacing: 0.02rem
+          text-align: center
+          text-shadow: 0 .2rem .1rem rgba(0, 0, 0, 0.5)
+          +media-breakpoint-up(sm)
+               font-size: 6.5rem
+          +media-breakpoint-up(md)
+               font-size: 8rem
+
+     .separator
+          display: inline-block
+          width: 500px
+          max-width: 80%
+          height: 2px
+          background: $white
+          margin: 1rem auto 2rem auto
+          position: relative
+          opacity: 0.65
+
+          span
+               display: block
+               position: relative
+               left: 50%
+               transform: translateX(-50%)
+               top: -4px
+
+               &::before, &::after
+                    content: ' '
+                    position: absolute
+                    transform: rotate(45deg) translateX(-50%)
+                    left: 50%
+
+               &::before
+                    border: 1px solid $white
+                    width: 1.2rem
+                    height: 1.2rem
+                    top: -10px
+
+               &::after
+                    background: $white
+                    width: 1.5rem
+                    height: 1.5rem
+
+          &::before, &::after
+               content: ' '
+               position: absolute
+               background: white
+               transform: rotate(45deg)
+               display: block
+               width: 0.8rem
+               height: 0.8rem
+               top: -5px
+
+          &::after
+               right: 0
+
+.light
+     font-weight: 100
+
+.light-bold
+     font-weight: 900
+
+.section
+     padding: 6rem 0
+     width: 100%
+
+.jumbotron
+     margin-bottom: 0
+     color: $white
+     display: flex
+     justify-content: center
+     align-items: center
+     flex-direction: column
+
+#background-1
+     background: url('../images/pexels-photo-485866.jpeg')
+     background-position: center
+     background-repeat: no-repeat
+     background-size: cover
+     position: relative
+     z-index: 1
+     background-attachment: fixed
+
+     &::before
+          content: ' '
+          +position-absolute()
+          background: linear-gradient(to right, #085078, #85D8CE)
+          opacity: 0.75
+
+.attention-heading
+     margin-top: 7rem
+     font-size: 3.5rem
+
+.cellphone-container
+     position: relative
+     height: 100%
+     width: 100%
+     padding-top: 3rem
+
+     &::before
+          content: ' '
+          position: absolute
+          top: 12%
+          left: 8%
+          background: linear-gradient(to right, #085078, #85D8CE)
+          z-index: -1
+          height: 75%
+          width: 70%
+
+     .cellphone-header
+          position: absolute
+          top: 50%
+          left: 43%
+          transform: translateX(-50%)
+
+          +media-breakpoint-down(sm)
+               font-size: 1.5rem
+
+     .attention-img
+          height: 100%
+          width: 85%
+
+hr
+     width: 960px
+
+.text-blue
+     color: $blue
+
+.mt-7
+     margin-top: 7rem
+
+.icon
+     font-size: 4rem
+
+.social-links
+     +display-flex($j-content: space-between)
+     flex-wrap: wrap
+     @extend .text-white
+     text-align: center
+
+     li a
+          font-size: 2.5rem
+          +media-breakpoint-up(sm)
+               font-size: 3rem
+          +media-breakpoint-up(md)
+               font-size: 3.5rem
+          +media-breakpoint-up(lg)
+               font-size: 4rem
+
+.display-2
+     +media-breakpoint-down(sm)
+          font-size: 4.5rem
+
+.copyright
+     position: absolute
+     bottom: 3%
+     left: 50%
+     transform: translateX(-50%)
