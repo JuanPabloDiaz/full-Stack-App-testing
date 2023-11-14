@@ -1,5 +1,9 @@
 # Full Stack Social Media App
 
+This repo is an exact clone of My [Full Stack Social Media App](https://github.com/JuanPabloDiaz/socialMedia).
+
+> This repo is ment for learning and testing purposes only.
+
 Build a modern social app with a stunning UI with a native mobile feel, a special tech stack, an infinite scroll feature, and amazing performance using React JS, Appwrite, TypeScript, and more.
 
 ### Check the [Demo]()
